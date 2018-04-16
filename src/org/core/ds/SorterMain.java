@@ -9,13 +9,14 @@ public class SorterMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] arr = { 1,2,3,5,4 };
+		int[] arr = {1,2,3,4,5};
 
-		HashMap<String, String> result = getSortedValue("optimizedbubblesort", arr);
+		HashMap<String, String> result = getSortedValue("selectionsort", arr);
 
 		if (result != null) {
 			System.out.println(
-					"Sorted Array is " + result.get("sortedArray") + "\nsteps taken " + result.get("noOfStepsTaken"));
+					"Sorted Array is " + result.get("sortedArray") + 
+					"\nsteps taken " + result.get("noOfStepsTaken"));
 		}
 	}
 
@@ -29,6 +30,9 @@ public class SorterMain {
 			break;
 		case "optimizedbubblesort":
 			sortedData = BubbleSort.getOptimizedBubbleSortData(array);
+			break;
+		case "selectionsort":
+			sortedData = SelectionSort.getSelectionSortData(array);
 			break;
 
 		default:

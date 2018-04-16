@@ -17,9 +17,8 @@ public class SelectionSort {
 					minimum_element_index = j;
 				}
 				steps++;
-
 			}
-
+			
 			int temp = data[minimum_element_index];
 			data[minimum_element_index] = data[i];
 			data[i] = temp;
